@@ -1,0 +1,58 @@
+$extra-large: 1200px !default;
+$large: 992px !default;
+$medium: 768px !default;
+$small: 576px !default;
+
+@mixin media($media) {
+  @if $media==max-extra-small-screens {
+    @media only screen and (max-width: $small) {
+      @content;
+    }
+  }
+
+  @if $media==small-screens {
+    @media only screen and (max-width: $medium) and (min-width: ($small + 1px)) {
+      @content;
+    }
+  }
+  @if $media==min-small-screens {
+    @media only screen and (min-width:( $small + 1px)) {
+      @content;
+    }
+  }
+  @if $media==max-small-screens {
+    @media only screen and (max-width: $medium) {
+      @content;
+    }
+  }
+  @if $media==large-screens {
+    @media only screen and (min-width: ($medium + 1px)) and (max-width: $large) {
+      @content;
+    }
+  }
+  @if $media==max-large-screens {
+    @media only screen and (max-width: $large) {
+      @content;
+    }
+  }
+  @if $media==min-large-screens {
+    @media only screen and (min-width:( $large + 1px)) {
+      @content;
+    }
+  }
+  @if $media==min-extra-large-screens {
+    @media only screen and (min-width: $extra-large) {
+      @content;
+    }
+  }
+  @if $media==extra-large-screens {
+    @media only screen and (min-width: $extra-large) and (min-width: ($large + 1px)) {
+      @content;
+    }
+  }
+  @if $media==max-extra-large-screens {
+    @media only screen and (max-width:( $extra-large - 1px)) {
+      @content;
+    }
+  }
+}

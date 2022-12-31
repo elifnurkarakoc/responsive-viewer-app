@@ -1,0 +1,37 @@
+.headerHolder {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+
+  a {
+    text-decoration: none;
+    color: #444444;
+  }
+
+  .brandNameHolder,
+  .headerTitleHolder {
+    display: flex;
+    color: #444444;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .headerTitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    margin-right: 16px;
+  }
+
+  .buttonHolder {
+    border-radius: 999px;
+    border: 2px solid #d0d5dd;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    padding: 8px;
+  }
+}

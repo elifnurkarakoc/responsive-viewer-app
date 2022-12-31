@@ -1,0 +1,72 @@
+.screensContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  .screenHolder {
+    // position: absolute;
+    inset: 0px;
+    overflow: scroll;
+
+    .screensHolder {
+      // color: #fff;
+      // width: 80%;
+      // white-space: nowrap;
+      // display: flex;
+      // overflow-x: scroll;
+      // // height: 50%;
+
+      display: flex;
+      width: calc((100vw - 300px) / 1);
+      flex-wrap: wrap;
+      transform: scale(1);
+      transform-origin: 0px 0px;
+      backface-visibility: hidden;
+      position: relative;
+
+      .iframesHolder {
+        display: flex;
+        white-space: nowrap;
+
+        .iframeHolder {
+          display: flex;
+          margin: 10px;
+          position: relative;
+          border: 16px black solid;
+          border-top-width: 60px;
+          border-bottom-width: 60px;
+          border-radius: 36px;
+          height: fit-content;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 5px;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #333;
+            border-radius: 10px;
+          }
+
+          /* The circle on the bottom of the device */
+          &::after {
+            content: "";
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 50%;
+            bottom: -65px;
+            transform: translate(-50%, -50%);
+            background: #333;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

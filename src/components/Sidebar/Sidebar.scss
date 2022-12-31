@@ -1,0 +1,24 @@
+.sidebarHolder {
+  display: flex;
+  flex-direction: column;
+  // color: #fff;
+
+  padding: 10px;
+
+  width: 20%;
+
+  .sidebarTitleHolder {
+    padding: 10px 0px;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .screensCheckboxHolder {
+    display: flex;
+    padding: 5px 10px;
+    flex-direction: column;
+  }
+}
