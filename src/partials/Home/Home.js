@@ -12,15 +12,14 @@ import { Result } from "antd";
 /** Component */
 import Screens from "components/Screens/Screens";
 import Sidebar from "components/Sidebar/Sidebar";
-import Header from "components/Header/Header";
 
 /** Stylesheets */
 import "./Home.scss";
 import { isCheckedScreenExist } from "utils/helper";
 
-const Home = ({ setScreens, screensValues, setZoomSelector }) => {
+const Home = ({ setScreens, screensValues }) => {
   const [url, setUrl] = useState("https://elifnurkarakoc.com");
-  const [zoom, setZoom] = useState(20);
+  const [zoom, setZoom] = useState(1);
   useEffect(() => {
     setScreens();
   }, []);
@@ -38,18 +37,29 @@ const Home = ({ setScreens, screensValues, setZoomSelector }) => {
     console.log(url);
   }, [url]);
 
-  const handleZoomClick = () => {
-    setZoom(100);
+  const handleZoomChange = (value) => {
+    if (isNaN(value)) {
+      return;
+    }
+    if (value === 0) {
+      setZoom(0.25);
+    } else if (value === 25) {
+      setZoom(0.5);
+    } else if (value === 50) {
+      setZoom(0.75);
+    } else if (value === 100) {
+      setZoom(1);
+    }
   };
   return (
     <>
-      <Header handleClick={handleZoomClick} />
       <div className="homePageholder">
         <Sidebar
           screens={screensValues}
           setScreens={setScreens}
           onKeyDown={handleKeyDown}
           onSearch={handleSearch}
+          onZoomChange={handleZoomChange}
         />
 
         <>

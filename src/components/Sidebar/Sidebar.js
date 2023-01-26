@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Input } from "antd";
+import { Input, Slider } from "antd";
 
 /** Components */
 import InputField from "./InputField/InputField";
@@ -8,7 +8,13 @@ import InputField from "./InputField/InputField";
 /** Stylesheets */
 import "./Sidebar.scss";
 
-export const Sidebar = ({ screens, setScreens, onKeyDown, onSearch }) => {
+export const Sidebar = ({
+  screens,
+  setScreens,
+  onKeyDown,
+  onSearch,
+  onZoomChange,
+}) => {
   const [selectedScreens, setSelectedScreens] = useState([]);
   const [allScreens, setAllScreens] = useState(screens);
 
@@ -28,6 +34,15 @@ export const Sidebar = ({ screens, setScreens, onKeyDown, onSearch }) => {
     setScreens([...tmpAllScreens]);
   };
 
+  const marks = {
+    25: "25%",
+    50: "50%",
+    100: {
+      style: { color: "#f50" },
+      label: <strong>100%</strong>,
+    },
+  };
+
   const { Search } = Input;
   return (
     <div className="sidebarHolder">
@@ -40,7 +55,14 @@ export const Sidebar = ({ screens, setScreens, onKeyDown, onSearch }) => {
         onSearch={(event) => onSearch(event)}
         onChange={handleChange}
       />
-
+      Zoom
+      <Slider
+        defaultValue={100}
+        tooltip={{ open: true }}
+        onChange={onZoomChange}
+        marks={marks}
+        step={null}
+      />
       <div className="sidebarTitleHolder">All Screens</div>
       <div className="screensCheckboxHolder">
         {allScreens?.map((screen, index) => (

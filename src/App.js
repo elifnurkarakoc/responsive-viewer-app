@@ -20,6 +20,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="appHolder">
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

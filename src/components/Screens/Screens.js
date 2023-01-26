@@ -9,13 +9,24 @@ export const Screens = ({ screens, url, zoom }) => {
       <div className="screensContainer">
         <div className="screenHolder">
           {screens && (
-            <div className="screensHolder">
+            <div
+              className="screensHolder"
+              style={{
+                transform: `scale(${zoom})`,
+                width: `calc((100vw - 300px) / ${zoom} )`,
+              }}
+            >
               <div className="iframesHolder">
                 {screens?.map(
                   (screen) =>
                     screen?.checked && (
-                      <div className="iframeHolder">
-                        {url !== "" && <Iframe screen={screen} url={url} />}
+                      <div>
+                        <div>
+                          {screen?.width}x{screen?.height}
+                        </div>
+                        <div className="iframeHolder">
+                          {url !== "" && <Iframe screen={screen} url={url} />}
+                        </div>
                       </div>
                     )
                 )}
