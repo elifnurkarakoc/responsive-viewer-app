@@ -13,17 +13,7 @@ export const InputField = ({ id, deviceName, checked, onChange }) => {
 
   return (
     <div>
-      <Checkbox
-        // className="inputHolder"
-        // type="checkbox"
-        // id={id}
-        // name={deviceName}
-        // value={deviceName}
-        // checked={checked}
-        onChange={handleOnChange}
-      >
-        {deviceName}
-      </Checkbox>
+      <Checkbox onChange={handleOnChange}>{deviceName}</Checkbox>
     </div>
   );
 };

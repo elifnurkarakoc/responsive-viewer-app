@@ -871,4 +871,34 @@ export const Screens = [
   },
 ];
 
+export const tmpScreens = [
+  {
+    title: "iPhone",
+    key: "iPhone",
+    children: [
+      {
+        deviceName: "iPhone 14",
+        title: "iPhone 14",
+        key: "iPhone 14",
+        checked: false,
+        width: 390,
+        height: 844,
+        DPR: 3,
+        userAgent:
+          "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/99.0.4844.47 Mobile/15E148 Safari/604.1",
+      },
+      {
+        deviceName: "iPhone 14 Plus",
+        title: "iPhone 14 Plus",
+        key: "iPhone 14 Plus",
+        checked: false,
+        width: 428,
+        height: 926,
+        DPR: 3,
+        userAgent:
+          "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/99.0.4844.47 Mobile/15E148 Safari/604.1",
+      },
+    ],
+  },
+];
 export default Screens;

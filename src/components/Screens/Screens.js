@@ -1,13 +1,11 @@
 import React from "react";
-import { isCheckedScreenExist } from "utils/helper";
 import Iframe from "./Iframe/Iframe";
 
 import "./Screens.scss";
 
-export const Screens = ({ screens, url }) => {
+export const Screens = ({ screens, url, zoom }) => {
   return (
     <div>
-
       <div className="screensContainer">
         <div className="screenHolder">
           {screens && (

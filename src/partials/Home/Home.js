@@ -7,16 +7,20 @@ import { createStructuredSelector } from "reselect";
 import { setScreens } from "store/actions";
 import { setScreensSelector } from "store/selectors";
 
+import { Result } from "antd";
+
 /** Component */
 import Screens from "components/Screens/Screens";
 import Sidebar from "components/Sidebar/Sidebar";
+import Header from "components/Header/Header";
 
 /** Stylesheets */
 import "./Home.scss";
 import { isCheckedScreenExist } from "utils/helper";
 
-const Home = ({ setScreens, screensValues }) => {
-  const [url, setUrl] = useState();
+const Home = ({ setScreens, screensValues, setZoomSelector }) => {
+  const [url, setUrl] = useState("https://elifnurkarakoc.com");
+  const [zoom, setZoom] = useState(20);
   useEffect(() => {
     setScreens();
   }, []);
@@ -34,26 +38,35 @@ const Home = ({ setScreens, screensValues }) => {
     console.log(url);
   }, [url]);
 
+  const handleZoomClick = () => {
+    setZoom(100);
+  };
   return (
-    <div className="homePageholder">
-      <Sidebar
-        screens={screensValues}
-        setScreens={setScreens}
-        onKeyDown={handleKeyDown}
-        onSearch={handleSearch}
-      />
+    <>
+      <Header handleClick={handleZoomClick} />
+      <div className="homePageholder">
+        <Sidebar
+          screens={screensValues}
+          setScreens={setScreens}
+          onKeyDown={handleKeyDown}
+          onSearch={handleSearch}
+        />
 
-      <>
-        {(!isCheckedScreenExist(screensValues) || url === undefined) && (
-          <div className="emptyStateHolder">
-            You can enter the url and select the screens
-          </div>
-        )}
-        {isCheckedScreenExist(screensValues) && url && (
-          <Screens screens={screensValues} url={url} />
-        )}
-      </>
-    </div>
+        <>
+          {(!isCheckedScreenExist(screensValues) || url === undefined) && (
+            <div className="emptyStateHolder">
+              <Result
+                status="warning"
+                title="You can enter the url and select the screens"
+              />
+            </div>
+          )}
+          {isCheckedScreenExist(screensValues) && url && (
+            <Screens screens={screensValues} url={url} zoom={zoom} />
+          )}
+        </>
+      </div>
+    </>
   );
 };
 

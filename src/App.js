@@ -20,11 +20,8 @@ function App() {
   return (
     <Provider store={store}>
       <div className="appHolder">
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/product" element={<Product />} />
-          <Route path="/about" element={<About />} /> */}
         </Routes>
       </div>
     </Provider>

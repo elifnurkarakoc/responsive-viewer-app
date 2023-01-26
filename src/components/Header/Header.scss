@@ -1,17 +1,21 @@
 .headerHolder {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  background-color: #071330;
+  z-index: 1;
 
   a {
     text-decoration: none;
-    color: #444444;
+    color: #fff;
   }
 
   .brandNameHolder,
   .headerTitleHolder {
     display: flex;
-    color: #444444;
+    color: #fff;
     align-items: center;
     flex-direction: row;
     font-weight: 400;

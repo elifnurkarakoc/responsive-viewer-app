@@ -1,11 +1,12 @@
 .sidebarHolder {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  // color: #fff;
-
   padding: 10px;
-
-  width: 20%;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  overflow: scroll;
+  height: 100%;
 
   .sidebarTitleHolder {
     padding: 10px 0px;
@@ -18,7 +19,6 @@
 
   .screensCheckboxHolder {
     display: flex;
-    padding: 5px 10px;
     flex-direction: column;
   }
 }
