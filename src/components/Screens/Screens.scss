@@ -5,10 +5,8 @@
   left: 258px;
 
   .screenHolder {
-    // position: absolute;
     inset: 0px;
     overflow: scroll;
-    //  width: 100%;
 
     .screensHolder {
       display: flex;
@@ -23,6 +21,10 @@
         display: flex;
         // flex-direction: column;
         flex-wrap: wrap;
+
+        .deviceNameHolder {
+          margin: 10px;
+        }
 
         .iframeHolder {
           display: flex;

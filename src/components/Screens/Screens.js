@@ -21,7 +21,8 @@ export const Screens = ({ screens, url, zoom }) => {
                   (screen) =>
                     screen?.checked && (
                       <div>
-                        <div>
+                        <div className="deviceNameHolder">
+                          <strong>{screen?.deviceName} </strong>
                           {screen?.width}x{screen?.height}
                         </div>
                         <div className="iframeHolder">

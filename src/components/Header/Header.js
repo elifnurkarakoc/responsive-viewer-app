@@ -1,3 +1,4 @@
+import Logo from "components/svg/Logo";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
@@ -5,8 +6,9 @@ import "./Header.scss";
 const Header = () => {
   return (
     <div className="headerHolder">
+      <Logo />
       <Link to="/" preventScrollReset={true}>
-        <div className="brandNameHolder">Responsive Viewer App</div>
+        <div className="brandNameHolder">responsiveViewer</div>
       </Link>
 
       {/* <div className="headerTitleHolder">

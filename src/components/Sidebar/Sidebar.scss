@@ -7,6 +7,7 @@
   left: 0;
   overflow: scroll;
   height: 100%;
+  top: 85px;
 
   .sidebarTitleHolder {
     padding: 10px 0px;
@@ -20,5 +21,13 @@
   .screensCheckboxHolder {
     display: flex;
     flex-direction: column;
+  }
+
+  .ant-btn-primary {
+    background-color: #18284c;
+  }
+
+  .ant-slider-track {
+    background-color: #a6bcf0;
   }
 }

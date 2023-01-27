@@ -1,14 +1,37 @@
 .homePageholder {
-  display: flex;
-  margin-top: 10px;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: none;
+  @media (min-width: 640px) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 90px;
+    position: relative;
+  }
+}
+
+.mobileHolder {
+  display: none;
+  @media (max-width: 640px) {
+    color: #495571;
+    display: flex;
+    position: relative;
+    top: 200px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+  }
 }
 
 .emptyStateHolder {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 160px;
+  top: 40px;
+
+  .ant-result-icon > .anticon {
+    color: #495571;
+  }
 }

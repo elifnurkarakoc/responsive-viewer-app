@@ -1,11 +1,12 @@
 .headerHolder {
   display: flex;
-  justify-content: space-between;
-  padding: 14px 40px;
-  position: sticky;
+  align-items: center;
+  padding: 14px 10px;
+  position: fixed;
   top: 0;
-  background-color: #071330;
+  background-color: #18284c;
   z-index: 1;
+  width: 100%;
 
   a {
     text-decoration: none;

@@ -58,7 +58,7 @@ export const Sidebar = ({
       Zoom
       <Slider
         defaultValue={100}
-        tooltip={{ open: true }}
+        tooltip={{ open: false }}
         onChange={onZoomChange}
         marks={marks}
         step={null}

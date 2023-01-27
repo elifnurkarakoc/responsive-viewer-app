@@ -18,7 +18,7 @@ import "./Home.scss";
 import { isCheckedScreenExist } from "utils/helper";
 
 const Home = ({ setScreens, screensValues }) => {
-  const [url, setUrl] = useState("https://elifnurkarakoc.com");
+  const [url, setUrl] = useState();
   const [zoom, setZoom] = useState(1);
   useEffect(() => {
     setScreens();
@@ -31,8 +31,11 @@ const Home = ({ setScreens, screensValues }) => {
   };
 
   const handleSearch = (event) => {
-    setUrl(event);
+    if (event) {
+      setUrl(event);
+    }
   };
+
   useEffect(() => {
     console.log(url);
   }, [url]);
@@ -75,6 +78,9 @@ const Home = ({ setScreens, screensValues }) => {
             <Screens screens={screensValues} url={url} zoom={zoom} />
           )}
         </>
+      </div>
+      <div className="mobileHolder">
+        To view the page, you should view it from the Desktop view.
       </div>
     </>
   );
