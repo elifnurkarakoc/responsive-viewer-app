@@ -1,12 +1,17 @@
 .headerHolder {
   display: flex;
   align-items: center;
-  padding: 14px 10px;
+  padding: 5px 10px;
   position: fixed;
   top: 0;
   background-color: #18284c;
   z-index: 1;
-  width: 100%;
+  width: 99%;
+  justify-content: space-between;
+
+  .logoHolder {
+    display: flex;
+  }
 
   a {
     text-decoration: none;

@@ -1,13 +1,24 @@
 .sidebarHolder {
   display: inline-flex;
   flex-direction: column;
-  padding: 10px 25px;
+  padding: 0px 25px 10px;
   width: 200px;
   position: fixed;
   left: 0;
   overflow: scroll;
   height: 100%;
   top: 85px;
+
+  .ant-input-group-wrapper {
+    position: fixed;
+    z-index: 1;
+    width: 210px !important;
+    background-color: #dbdbdb;
+  }
+
+  .sliderNameHolder {
+    margin-top: 45px;
+  }
 
   .sidebarTitleHolder {
     padding: 10px 0px;

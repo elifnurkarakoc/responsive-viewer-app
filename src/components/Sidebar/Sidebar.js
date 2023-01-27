@@ -55,7 +55,7 @@ export const Sidebar = ({
         onSearch={(event) => onSearch(event)}
         onChange={handleChange}
       />
-      Zoom
+      <div className="sliderNameHolder">Zoom</div>
       <Slider
         defaultValue={100}
         tooltip={{ open: false }}
