@@ -1,37 +1,39 @@
-# Create React App
+<p align="center">
+    <h3 align="center">Responsive Viewer App</h3>
+    <br />
+        <p align="center">
+        <a href="">View Demo🚀</a>
+    </p>
+</p>
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+<hr>
 
-## Deploy Your Own
+This is the example repository for building a responsive viewer app with ReactJS.
 
-Deploy your own Create React App project with Vercel.
+### Built With
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+- [ReactJS](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Ant Design](https://ant.design/)
 
-_Live Example: https://create-react-template.vercel.app/_
+<!-- GETTING STARTED -->
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get a local copy up and running follow these simple steps.
 
-### `npm start`
+### Installation
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/elifnurkarakoc/responsive-viewer-app.git
+   ```
+2. Install packages
+   ```sh
+   yarn
+   ```
+3. Run the development server:
 
-The page will reload when you make changes. You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
-
-- [ ] Tree ant
-- [x] zoom & wrap
-- [ ] footer
-- [x] logo & header & title
-- [x] mobile görünüm
+   ```bash
+   yarn dev
+   ```

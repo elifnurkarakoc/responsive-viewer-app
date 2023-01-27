@@ -5,10 +5,6 @@ import { fromJS } from "immutable";
 import { SET_SCREENS } from "store/constants";
 import Screens from "data/screens";
 
-// const arrScreen = Screens?.map((screen) =>
-//   Object.assign({}, screen, { checked: false })
-// );
-
 const initialState = fromJS({
   screens: Screens,
 });
