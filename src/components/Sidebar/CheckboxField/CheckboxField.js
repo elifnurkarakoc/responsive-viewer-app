@@ -2,9 +2,9 @@ import React from "react";
 import { Checkbox } from "antd";
 
 /** Stylesheets */
-import "./InputField.scss";
+import "./CheckboxField.scss";
 
-export const InputField = ({ deviceName, onChange }) => {
+export const CheckboxField = ({ deviceName, onChange }) => {
   const handleOnChange = () => {
     if (onChange) {
       onChange(deviceName);
@@ -18,4 +18,4 @@ export const InputField = ({ deviceName, onChange }) => {
   );
 };
 
-export default InputField;
+export default CheckboxField;

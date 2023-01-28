@@ -20,6 +20,7 @@ import { isCheckedScreenExist } from "utils/helper";
 const Home = ({ setScreens, screensValues }) => {
   const [url, setUrl] = useState();
   const [zoom, setZoom] = useState(1);
+
   useEffect(() => {
     setScreens();
   }, []);
@@ -36,10 +37,6 @@ const Home = ({ setScreens, screensValues }) => {
     }
   };
 
-  useEffect(() => {
-    console.log(url);
-  }, [url]);
-
   const handleZoomChange = (value) => {
     if (isNaN(value)) {
       return;
@@ -54,6 +51,7 @@ const Home = ({ setScreens, screensValues }) => {
       setZoom(1);
     }
   };
+
   return (
     <>
       <div className="homePageholder">

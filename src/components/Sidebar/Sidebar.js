@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Input, Slider } from "antd";
 
 /** Components */
-import InputField from "./InputField/InputField";
+import CheckboxField from "./CheckboxField/CheckboxField";
 
 /** Stylesheets */
 import "./Sidebar.scss";
@@ -66,7 +66,7 @@ export const Sidebar = ({
       <div className="sidebarTitleHolder">All Screens</div>
       <div className="screensCheckboxHolder">
         {allScreens?.map((screen, index) => (
-          <InputField
+          <CheckboxField
             key={`screen-device-${screen?.deviceName}-${index}`}
             deviceName={screen?.deviceName}
             onChange={handleChange}

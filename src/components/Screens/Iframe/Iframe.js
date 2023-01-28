@@ -18,7 +18,7 @@ const Iframe = ({ screen, url }) => {
       width={screen?.width}
       height={screen?.height}
       src={url}
-      title={screen.deviceName}
+      title={screen?.deviceName}
       id={id}
     />
   );
