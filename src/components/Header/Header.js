@@ -17,16 +17,6 @@ const Header = () => {
       <Link to="https://github.com/elifnurkarakoc/responsive-viewer-app">
         <Github />
       </Link>
-
-      {/* <div className="headerTitleHolder">
-        <Link to="/product" preventScrollReset={true}>
-          <div className="headerTitle">Product</div>
-        </Link>
-
-        <Link to="/about" preventScrollReset={true}>
-          <div className="headerTitle">About</div>
-        </Link>
-      </div> */}
     </div>
   );
 };

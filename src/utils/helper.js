@@ -19,5 +19,3 @@ export const setUserAgent = (window, userAgent) => {
 export const isCheckedScreenExist = (screens) => {
   return screens?.filter((screen) => screen?.checked)?.length > 0;
 };
-
-export default setUserAgent;

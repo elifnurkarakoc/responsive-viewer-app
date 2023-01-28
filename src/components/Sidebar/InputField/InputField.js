@@ -4,7 +4,7 @@ import { Checkbox } from "antd";
 /** Stylesheets */
 import "./InputField.scss";
 
-export const InputField = ({ id, deviceName, checked, onChange }) => {
+export const InputField = ({ deviceName, onChange }) => {
   const handleOnChange = () => {
     if (onChange) {
       onChange(deviceName);

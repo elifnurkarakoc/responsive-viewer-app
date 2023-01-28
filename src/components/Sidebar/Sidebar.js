@@ -68,7 +68,6 @@ export const Sidebar = ({
         {allScreens?.map((screen, index) => (
           <InputField
             key={`screen-device-${screen?.deviceName}-${index}`}
-            id={`screen-device-${screen?.deviceName}-${index}`}
             deviceName={screen?.deviceName}
             onChange={handleChange}
           />

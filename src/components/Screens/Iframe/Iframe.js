@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import setUserAgent from "utils/helper";
+import { setUserAgent } from "utils/helper";
 
 const Iframe = ({ screen, url }) => {
   const ref = useRef(null);
