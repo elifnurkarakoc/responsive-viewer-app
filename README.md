@@ -8,7 +8,7 @@
 
 <hr>
 
-This is the example repository for building a responsive viewer app with ReactJS.
+This is the repository for building a responsive viewer app with ReactJS.
 
 ### Built With
 

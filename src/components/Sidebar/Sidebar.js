@@ -15,7 +15,6 @@ export const Sidebar = ({
   onSearch,
   onZoomChange,
 }) => {
-  const [selectedScreens, setSelectedScreens] = useState([]);
   const [allScreens, setAllScreens] = useState(screens);
 
   useEffect(() => {
@@ -48,7 +47,8 @@ export const Sidebar = ({
     <div className="sidebarHolder">
       <Search
         style={{ marginBottom: 8, width: 200 }}
-        placeholder="elifnurkarakoc.com"
+        placeholder="https://elifnurkarakoc.com"
+        defaultValue={"https://elifnurkarakoc.com"}
         allowClear
         onKeyDown={(event) => onKeyDown(event)}
         enterButton
