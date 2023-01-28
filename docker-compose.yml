@@ -1,0 +1,7 @@
+version: "3.4"
+services:
+  resposive-viewer-app:
+    container_name: resposive-viewer-app
+    build: .
+    ports:
+      - 9001:8081

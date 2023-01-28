@@ -1,5 +1,17 @@
 {
     "compilerOptions": {
-      "baseUrl": "src"
+      "target": "es2022",
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": false,
+      "baseUrl": "./src",
+      "paths": {
+        "assets/*": ["./src/assets/*"],
+        "components/*": ["./src/components/*"],
+        "utils/*": ["./src/utilities/*"],
+        "partials/*": ["./src/partials/*"],
+        "routes/*": ["./src/routes/*"],
+        "store/*": ["./src/store/*"],
+        "services/*": ["./src/services/*"]
+      },
     }
   }

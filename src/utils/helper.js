@@ -1,5 +1,5 @@
 export const setUserAgent = (window, userAgent) => {
-  if (window.navigator.userAgent != userAgent) {
+  if (window.navigator.userAgent !== userAgent) {
     var userAgentProp = {
       get: function () {
         return userAgent;
